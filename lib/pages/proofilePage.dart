@@ -4,6 +4,7 @@ import '../widgets/InfoCard.dart';
 import '../widgets/customAppBar.dart';
 import '../widgets/footerNavigation.dart';
 import '../widgets/profileCard.dart';
+import '../widgets/subTitleText.dart';
 
 class ProofilePage extends StatefulWidget {
   const ProofilePage({super.key, required this.title});
@@ -60,16 +61,7 @@ class _ProfilePageState extends State<ProofilePage> {
                   email: 'beby@gmail.com',
                   imagePath: 'images/perfil.png'),
               const SizedBox(height: 16.0),
-              const Text(
-                'General',
-                style: TextStyle(
-                  fontFamily: 'Urbanist',
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xFF808D9E),
-                  letterSpacing: 0.0,
-                ),
-              ),
+              const SubTitleText(title: 'General'),
               Expanded(
                 child: ListView.builder(
                   shrinkWrap: true,
