@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'InfoCard.dart';
-import 'customAppBar.dart';
-import 'footerNavigation.dart';
-import 'profileCard.dart';
+import 'Widgets/InfoCard.dart';
+import 'Widgets/customAppBar.dart';
+import 'Widgets/footerNavigation.dart';
+import 'Widgets/profileCard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,21 +21,21 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Profile'),
+      home: const ProofilePage(title: 'Profile'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class ProofilePage extends StatefulWidget {
+  const ProofilePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ProofilePage> createState() => _ProfilePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ProfilePageState extends State<ProofilePage> {
   List<InfoMenu> listaDeCards = [
     InfoMenu(
         title: 'Account Information',
@@ -84,11 +84,12 @@ class _MyHomePageState extends State<MyHomePage> {
               const Text(
                 'General',
                 style: TextStyle(
-                    fontFamily: 'Urbanist',
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFF808D9E),
-                    letterSpacing: 0.0),
+                  fontFamily: 'Urbanist',
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF808D9E),
+                  letterSpacing: 0.0,
+                ),
               ),
               Expanded(
                 child: ListView.builder(
